@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>Fractal.h</itemPath>
+      <itemPath>bitmapCore.hpp</itemPath>
+      <itemPath>box.h</itemPath>
+      <itemPath>triplexNumber.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>Fractal.cpp</itemPath>
+      <itemPath>bitmapCore.cpp</itemPath>
+      <itemPath>box.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+      <itemPath>triplexNumber.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <itemPath>license.txt</itemPath>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/usr/include/GL</pElem>
+          </incDir>
+          <incFile>
+            <pElem>/usr/include/GL/glut.h</pElem>
+          </incFile>
+          <commandLine>-lpthread</commandLine>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerOptionItem>-lglut</linkerOptionItem>
+            <linkerOptionItem>-lGL</linkerOptionItem>
+            <linkerOptionItem>-lGLU</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="Fractal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Fractal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="bitmapCore.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="bitmapCore.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="box.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="box.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="license.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="triplexNumber.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="triplexNumber.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>8</standard>
+          <commandLine>-lpthread</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerOptionItem>-lglut</linkerOptionItem>
+            <linkerOptionItem>-lGL</linkerOptionItem>
+            <linkerOptionItem>-lGLU</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="Fractal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Fractal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="bitmapCore.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="bitmapCore.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="box.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="box.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="license.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="triplexNumber.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="triplexNumber.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
