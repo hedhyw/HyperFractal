@@ -1,5 +1,4 @@
-# HyperFractal
-The three-dimensional fractal animation generator.
+HyperFractal – the three-dimensional fractal animation generator.
 
 All fractal parameters are located in fractal.cpp:
   Fractal::func – an iteration fractal function;
