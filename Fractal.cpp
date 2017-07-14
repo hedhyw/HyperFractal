@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 hedhyw.
+ * Copyright 2016 Maxim Krivchun.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -31,20 +31,28 @@
 
 #include "Fractal.h"
 
-Fractal::Fractal()
-: MAX_RADIUS(2.0), MAX_FRAMES(80) {
-    C = triplexNumber(1.2, -0.34, +1.24);;
+Fractal::Fractal(int ITERATION_LIMIT)
+: MAX_RADIUS(2.0), MAX_FRAMES(80), LIMIT(ITERATION_LIMIT) {
+    C = triplexNumber(1.2, -0.34, +1.24);
 }
 
 void Fractal::nextFrame() {
+    static float rot = 0;
+    rot += 
     frame_index++;
-    C = triplexNumber::sphere(1.0,
-            frame_index / 90.0f * 40 / M_PI,
-            frame_index / 180.0f + 0.5f);
+    C = triplexNumber::sphere(1.0, rot / 90.0f * 40 / M_PI, rot / 180.0f+0.5f);
 }
 
 void Fractal::func(triplexNumber &t, double x, double y, double z) {
     t = t.pow(3) + C;
+}
+
+uint8_t Fractal::color(int i, int i2, int x, int y, int z) {
+    const int MIN_COLOR = 5;
+    // i2 - product of absolute values of complex numbers
+    // i - count of iterations
+    i = ((int) (i * 5 * 0xFF) / LIMIT) % 0xFF;
+    return (uint8_t) (i < MIN_COLOR ? 0 : (int) (i2) % 0xFF);
 }
 
 bool Fractal::hasNextFrame() {
@@ -56,4 +64,5 @@ int Fractal::getFrameIndex() {
 }
 
 Fractal::~Fractal() {
+    
 }

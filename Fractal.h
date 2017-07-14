@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2016 hedhyw.
+ * Copyright 2016 Maxim Krivchun.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,17 +33,20 @@
 #define FRACTAL_H
 
 #include <cmath>
+#include <cstdint>
 #include "triplexNumber.h"
 
 class Fractal {
 public:
-    Fractal();
+    Fractal(int ITERATION_LIMIT);
     virtual ~Fractal();
     void func(triplexNumber &t, double x, double y, double z);
     void nextFrame();
+    uint8_t color(int i, int i2, int x, int y, int z);
     bool hasNextFrame();
     const float MAX_RADIUS;
     const int MAX_FRAMES;
+    const int LIMIT;
     int getFrameIndex();
 protected:
     int frame_index = 0;
