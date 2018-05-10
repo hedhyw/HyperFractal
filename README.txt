@@ -13,3 +13,5 @@ Image parameters that are located in main.cpp:
   SIZE  – a half of image size;
   LIMIT – iterations limit;
   THREAD_COUNT - count of generation threads.
+
+Note: libpthread-stubs0-dev and freeglut3-dev must be installed.
